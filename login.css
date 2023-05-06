@@ -1,0 +1,69 @@
+body{
+    
+    background-color: #a37cf0;
+}
+div.baslik{
+background-color: #e6ddd6;
+
+height: 110px;
+width: 100%;
+text-align:center;
+color:#010101;
+font-size:60pt ;
+font-family:Cambria;
+}
+div.loginheaderboslukdiv{
+    height: 100px;
+    width: 100%;
+
+}
+div.loginmenusudiv{
+    margin-left:20px;
+margin-right:20px;
+
+
+}
+div.loginboslukdiv{
+    float:left;
+    width:30%;
+    height:600px ;
+
+}
+div.logindiv{
+    
+    float:left;
+    height:600px ;
+    width:40%;
+    font-size:35pt;
+    color: #010101;
+    text-align: center;
+    background-image: url("loginarkamenu.jpg");
+}
+div.loginyazisi_ic{
+    text-align: center;
+    font-size:55px;
+    color:#010101;
+}
+div.boyunabosluk_ic 
+{
+    width: 100%;
+    height: 10px;
+}
+div.labelSekliYazi_ic{
+    color: #010101;
+    text-align: left;
+    font-size:35px;
+    
+
+}
+div.iceriyetextboxekleme_ic{
+    height: 30px;
+}
+div.iceriyebuttonekleme_ic{
+    height: 30px;
+}
+
+
+div.sifirla{
+    clear: both;
+}
