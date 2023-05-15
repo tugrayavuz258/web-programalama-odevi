@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Amasya stadyum</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="amasyastadyumloginsiz.css">
+<link rel="stylesheet" type="text/css" href="amasyastadyumloginli.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -64,6 +64,7 @@
                        
                         <td>
                             <a class="headerlinkler" href="login.html"> LOG-IN</a>
+                            <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo  $_SESSION["kullaniciAdi"]  ?> </a>
                         </td>
         
                     </tr>
@@ -119,67 +120,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        <div  class="headerileyazilararasiboyunabosluk col-12 col-md-6"> &nbsp;</div>
-
-
-
-
-
-<div class="footer col-lg-12 col-md-12">
-    <div class="footerkimlik "> Tugra YAVUZ B221210064  1-B</div>
-     
-   
-     <div class="footersosyallinkler ">
-        <a  href="https://www.instagram.com/tugra_yavuz/?hl=tr"> 
-            <img src="instagram.png" width="50" height="50"> 
-        </a>
-            <a  href="https://twitter.com/tugra_yavuz258"> 
-                <img src="twitter.png" width="50" height="50"> 
-            </a>
-            <a  href="https://github.com/tugrayavuz258"> 
-                <img src="github.png" width="50" height="50"> 
-
-
-     </div>
-     </div>
-
-
-
-
-
-
-
-
-        </div>
-</div>
-</body>
-</html>

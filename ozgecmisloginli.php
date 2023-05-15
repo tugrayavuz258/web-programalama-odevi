@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ozgecmis</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="ozgecmisloginsiz.css">
+    <link rel="stylesheet" type="text/css" href="ozgecmisloginli.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -18,29 +18,29 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginsiz.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="hakkindaloginsiz.php"> HAKKINDA </a>
                             </td>
         
                             <td>
-                                <a  class="headerlinkler" href="ozgecmisloginsiz.html"> ÖZGEÇMİŞ</a>
+                                <a  class="headerlinkler" href="ozgecmisloginsiz.php"> ÖZGEÇMİŞ</a>
                             </td>
         
                             <td>
-                                <a class="headerlinkler" href="sehrimloginsiz.html"> SEHRİM</a>
+                                <a class="headerlinkler" href="sehrimloginsiz.php"> SEHRİM</a>
                             </td>
         
                         </tr>
         
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="mirasimizloginsiz.html"> MİRASIMIZ </a>
+                                <a class="headerlinkler" href="mirasimizloginli.php"> MİRASIMIZ </a>
                             </td>
             
                             <td>
-                                <a class="headerlinkler" href="hobilerimloginsiz.html"> HOBİLERİM</a>
+                                <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                             </td>
                             <td>
-                                <a class="headerlinkler" href="iletisim.html"> ILETISIM </a>
+                                <a class="headerlinkler" href="iletisimloginli.php"> ILETISIM </a>
                             </td>
         
                         </tr>
@@ -60,7 +60,7 @@
                     <tr>
                        
                         <td>
-                            <a class="headerlinkler" href="login.html"> LOG-IN</a>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php session_start(); echo $_SESSION["kullaniciAdi"];  ?> </a>
                         </td>
         
                     </tr>
@@ -126,7 +126,7 @@
 
         </div>
 
-        
+        <
 
 
 

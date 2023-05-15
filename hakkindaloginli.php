@@ -32,7 +32,7 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
 
     if ($kontrolStringi == $kullaniciSifre && trim($kullaniciSifre) !== '') {
         $_SESSION["kullaniciAdi"] = $_POST["passwordname"];
-        $alertmesaji = "Sifreniz dogru hos geldiniz  ";
+        $alertmesaji = "Sifreniz dogru hos geldiniz  " . $_POST["passwordname"] ;
         echo '<script>';
         echo 'window.alert("' . $alertmesaji . '");';
         echo '</script>';
@@ -76,26 +76,26 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
             <div class="tabloicerigidiv">
                 <tr>
                     <td>
-                        <a class="headerlinkler" href="hakkindaloginli.html"> HAKKINDA </a>
+                        <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
                     </td>
 
                     <td>
-                        <a  class="headerlinkler" href="ozgecmisloginli.html"> ÖZGEÇMİŞ</a>
+                        <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
                     </td>
 
                     <td>
-                        <a class="headerlinkler" href="sehrimloginli.html"> SEHRİM</a>
+                        <a class="headerlinkler" href="sehrimloginli.php"> SEHRİM</a>
                     </td>
 
                 </tr>
 
                 <tr>
                     <td>
-                        <a class="headerlinkler" href="mirasimizloginli.html"> MİRASIMIZ </a>
+                        <a class="headerlinkler" href="mirasimizloginli.php"> MİRASIMIZ </a>
                     </td>
     
                     <td>
-                        <a class="headerlinkler" href="hobilerimloginli.html"> HOBİLERİM</a>
+                        <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                     </td>
     
 
