@@ -9,135 +9,112 @@
 <link rel="stylesheet" type="text/css" href="iletilensayfa.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<script>
+    <?php session_start(); ?>
+var emailscript = <?php echo $_POST['emaililetisim'] ?>;
+var sifrescript = <?php echo $_POST['passwordiletisim'] ?>;
+var  baslikscript = <?php echo $_POST['baslikiletisim'] ?>;
+var cinsiyetscript= <?php echo $_POST['cinsiyet'] ?>;
+var sorunscript = <?php echo $_POST['Sorun'] ?>;
+var egitmenscript = <?php echo $_POST['egitmen'] ?>;
+var  kullanicimesajscript = <?php echo $_POST['mesaj'] ?>;
+var subescript=<?php echo $_POST['sube'] ?>;
+var kontrolstring= <?php echo  substr( $_POST["emaililetisim"], 0, strpos( $_POST["emaililetisim"], "@"))     ?>;
+var kullaiciadi;
+if (kontrolString == sifrescript && trim(sifrescript) !== "")
+{
+   
+     if(baslikscript !== "" && baslikscript !== " ")
+     {
+
+          if(cinsiyetscript !== "" && cinsiyetscript !== " ")
+          {
+
+              if(sorunscript !== "" && sorunscript !== " ")
+              {
+
+                    if(egitmenscript !== "" && egitmenscript !== " ")
+                    {
+
+                          if(kullanicimesajscript !== "" && kullanicimesajscript !== " ")
+                         {
+
+                              if(subescript !== "" && subescript !== " ")
+                                {
+                                    <?php 
+                                        $emailphp = $_POST["emaililetisim"];
+                                        $sifrephp = $_POST["passwordiletisim"];
+                                        $kullaniciadiphp= "";
+                                        $baslikphp = $_POST['baslikiletisim'];
+                                        $cinsiyetphp = $_POST['cinsiyet'];
+                                        $sorunphp= $_POST['Sorun'];
+                                        $egitmenphp = $_POST['egitmen'];
+                                        $mesajphp= $_POST['mesaj'];
+                                        $_SESSION["emailphp "] = $_POST["emaililetisim"];
+                                          $_SESSION["sifrephp"] = $_POST["passwordiletisim"];
+                                           $_SESSION["baslikphp"] = $_POST["baslikiletisim"];
+                                            $_SESSION["cinsiyetphp"] = $_POST["cinsiyet"];
+                                              $_SESSION["sorunphp"] = $_POST["Sorun"];
+                                                 $_SESSION["egitmenphp"] = $_POST["egitmen"];
+                                                     $_SESSION["mesajphp"] = $_POST["mesaj"];
+
+                                        ?>
+
+
+                                 }
+                                 else{
+                                    window.alert( "Lütfen  şubenizi giriniz ");
+                                     window.location.href = "iletisimloginsiz.html";
+                                 }
+                         }
+                         else
+                         {
+                            window.alert( "Lütfen  mesajınızı giriniz ");
+                            window.location.href = "iletisimloginsiz.html";
+                         }
+
+                    }
+                    else{
+                         window.alert( "Lütfen  eğitmeninizi giriniz ");
+                         window.location.href = "iletisimloginsiz.html";
+                    }
+              }
+              else{
+               window.alert( "Lütfen  sorununuzu giriniz ");
+             window.location.href = "iletisimloginsiz.html";
+              }
+         }
+          else{
+            window.alert( "Lütfen  cinsiyetinizi giriniz ");
+            window.location.href = "iletisimloginsiz.html";
+          }
+     }
+     else{
+        window.alert( "Lütfen  basliginizi giriniz ");
+        window.location.href = "iletisimloginsiz.html";
+     }
+
+
+}
+else{
+window.alert( "Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)");
+window.location.href = "iletisimloginsiz.html";
+}
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
 </head>
 <body>
-<?php 
-session_start();
-if ((isset($_POST['emaililetisim']) && isset($_POST['passwordiletisim']) && isset($_POST['baslikiletisim']) && isset($_POST['cinsiyet']) && isset($_POST['Sorun']) && isset($_POST['egitmen']) && isset($_POST['mesaj'])) && (isset($_POST['subeA']) || isset($_POST['subeB'])))
-{
-    
-    $kullaniciEmail = $_POST["emaililetisim"];
-    $kullaniciSifre = $_POST["passwordiletisim"];
-    $kullaniciAdi = "";
-    $baslik = $_POST['baslikiletisim'];
-    $kullaniciCinsiyet = $_POST['cinsiyet'];
-    $kullaniciSorun = $_POST['Sorun'];
-    $kullaniciEgitmen = $_POST['egitmen'];
-    $kullaniciMesaj = $_POST['mesaj'];
-    $_SESSION["kullaniciEmail"] = $_POST["emaililetisim"];
-    $_SESSION["passwordiletisim"] = $_POST["passwordiletisim"];
-    $_SESSION["baslik"] = $_POST["baslikiletisim"];
-    $_SESSION["kullaniciCinsiyet"] = $_POST["cinsiyet"];
-    $_SESSION["kullaniciSorun"] = $_POST["Sorun"];
-    $_SESSION["kullaniciEgitmen"] = $_POST["egitmen"];
-    $_SESSION["kullaniciMesaj"] = $_POST["mesaj"];
-   
-    $kontrolStringi = substr( $_POST["emaililetisim"], 0, strpos( $_POST["emaililetisim"], "@"));
-    if ($kontrolStringi == $kullaniciSifre && trim($kullaniciSifre) !== '')
-    {
-     $_SESSION["kullaniciAdi"]  = $kullaniciSifre;
-    echo '<script>';
-    echo 'var emailscript = "' . $_POST['emaililetisim'] . '";';
-    echo 'var sifrescript = "' . $_POST['passwordiletisim'] . '";';
-    echo 'var baslikscript = "' . $_POST['baslikiletisim'] . '";';
-    echo 'var cinsiyetscript = "' . $_POST['cinsiyet'] . '";';
-    echo 'var Sorunscript = "' . $_POST['Sorun'] . '";';
-    echo 'var egitmenscript = "' . $_POST['egitmen'] . '";';
-    echo 'var kullanicimesajscript = "' . $_POST['mesaj'] . '";';
-    
-    if (isset($_POST['subeA'])) {
-        $kullaniciSube = $_POST['subeA'];
-        $_SESSION["kullaniciSube"] = $_POST["subeA"];
-        echo 'var subescript = "' . $_POST['subeA'] . '";';
-    } else if (isset($_POST['subeB'])) {
-        $kullaniciSube = $_POST['subeB'];
-        $_SESSION["kullaniciSube"] = $_POST["subeB"];
-        echo 'var subescript = "' . $_POST['subeB'] . '";';
-    }
-    
-   
-    
-    echo 'if (sifrescript=== sifrescript && sifrescript.trim() !== "") {';
-    echo '    window.alert("Sifreniz dogru  " + sifrescript);';
-    
-    echo '    if (baslikscript !== "" && baslikscript !== " ") {';
-    echo '        window.alert("Başarıyla başlığınızı oluşturdunuz");';
-    
-    echo '        if (cinsiyetscript !== "" && cinsiyetscript !== " ") {';
-    echo '            window.alert("Başarıyla cinsiyet girişi yaptınız");';
-    
-    echo '            if (Sorunscript !== "" && Sorunscript !== " ") {';
-    echo '                window.alert("Başarıyla sorun girişi yaptınız");';
-    
-    echo '                if (egitmenscript !== "" && egitmenscript !== " ") {';
-    echo '                    window.alert("Başarıyla egitmen girişi yaptınız");';
-    
-    echo '                    if (kullanicimesajscript !== "" && kullanicimesajscript !== " ") {';
-    echo '                        window.alert("Başarıyla mesaj girişi yaptınız");';
-    
-    echo '                        if (subescript !== "" && subescript !== " ") {';
-    echo '                            window.alert("Başarıyla sube girişi yaptınız");';
-    echo '                        } else {';
-    echo '                            window.alert("Sube girişi yapınız");';
-    echo '                            window.location.href = "iletisimloginsiz.html";';
-    echo '                        }';
-    echo '                    } else {';
-        echo '                        window.alert("Mesaj girişi yapınız");';
-        echo '                    window.location.href = "iletisimloginsiz.html";';
-    echo '                } else {';
-    echo '                    window.alert("egitmen girişi yapınız");';
-    echo '                    window.location.href = "iletisimloginsiz.html";';
-    echo '                }';
-   echo '            } else {';
-   echo '                window.alert("Sorun girişi yapınız");';
-   echo '                window.location.href = "iletisimloginsiz.html";';
-   echo '            }';
-   echo '        } else {';
-   echo '            window.alert("Cinsiyet girişi yapınız");';
- echo '            window.location.href = "iletisimloginsiz.html";';
-    echo '        }';
-    echo '    } else {';
-   echo '        window.alert("Başlık girişi yapınız");';
-    echo '        window.location.href = "iletisimloginsiz.html";';
-    echo '    }';
-    echo '} else {';
-    echo '    window.alert("Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)");';
-    echo '    window.location.href = "iletisimloginsiz.html";';
-    echo '}';
-    echo '</script>';     
-
-    }
-    else
-    {
-        $hataMesaji = "Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)";
-        echo '<script>';
-        echo 'window.alert("' . $hataMesaji . '");';
-        echo 'window.location.href = "iletisimloginsiz.html";';
-        echo '</script>';
-    }
-
-    
-   
-
-
-
-
-
-}
-
-else{
-    $hataMesaji = "Lütfen girişinizi tam yapınız";
-    echo '<script>';
-    echo 'window.alert("' . $hataMesaji . '");';
-    echo 'window.location.href = "iletisimloginsiz.html";';
-    echo '</script>';
-
-}
-
-
-
-?>
-
 
 
 
@@ -197,7 +174,7 @@ else{
                     <tr>
                        
                         <td>
-                        <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo  $_SESSION["kullaniciAdi"]  ?> </a>
+                        <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo   $_SESSION["sifrephp"]  ?> </a>
                         </td>
         
                     </tr>
@@ -215,27 +192,27 @@ else{
 
         <div class= "logindiv col-lg-12 col-md-12"> 
         <div class ="basliklar">   <b> email:</b></div>
-        <div class ="yazilar">   <b>   <?php  echo $_SESSION["kullaniciEmail"]  ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php  echo  $_SESSION["emailphp "]  ?>   </b></div>
 
         <div class ="basliklar">   <b> sifre:</b></div>
-        <div class ="yazilar">   <b>   <?php echo $_SESSION["passwordiletisim"]  ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php echo $_SESSION["sifrephp"]  ?>   </b></div>
 
        
 
         <div class ="basliklar">   <b> kullanıcı cinsiyet</b></div>
-        <div class ="yazilar">   <b>   <?php echo $_SESSION["kullaniciCinsiyet"]  ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php echo  $_SESSION["cinsiyetphp"]  ?>   </b></div>
 
         <div class ="basliklar">   <b> Sorun:</b></div>
-        <div class ="yazilar">   <b>   <?php echo $_SESSION["kullaniciSorun"]  ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php echo $_SESSION["sorunphp"]   ?>   </b></div>
 
         <div class ="basliklar">   <b> egitmen:</b></div>
-        <div class ="yazilar">   <b>    <?php echo $_SESSION["kullaniciEgitmen"]  ?>   </b></div>
+        <div class ="yazilar">   <b>    <?php echo  $_SESSION["egitmenphp"]  ?>   </b></div>
 
         <div class ="basliklar">   <b> baslik:</b></div>
-        <div class ="yazilar">   <b>   <?php echo $_SESSION["baslik"]  ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php echo $_SESSION["baslikphp"] ?>   </b></div>
 
         <div class ="basliklar">   <b> mesaj: </b></div>
-        <div class ="yazilar">   <b>   <?php echo $_SESSION["kullaniciMesaj"]   ?>   </b></div>
+        <div class ="yazilar">   <b>   <?php echo  $_SESSION["mesajphp"]  ?>   </b></div>
 
 
 
