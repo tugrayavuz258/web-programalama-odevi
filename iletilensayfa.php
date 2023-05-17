@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hobilerim</title>
+    <title>IletilenSayfa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="iletilensayfa.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
+
 <script>
-    <?php session_start(); ?>
-var emailscript = <?php echo $_POST['emaililetisim'] ?>;
-var sifrescript = <?php echo $_POST['passwordiletisim'] ?>;
-var  baslikscript = <?php echo $_POST['baslikiletisim'] ?>;
-var cinsiyetscript= <?php echo $_POST['cinsiyet'] ?>;
-var sorunscript = <?php echo $_POST['Sorun'] ?>;
-var egitmenscript = <?php echo $_POST['egitmen'] ?>;
-var  kullanicimesajscript = <?php echo $_POST['mesaj'] ?>;
-var subescript=<?php echo $_POST['sube'] ?>;
-var kontrolstring= <?php echo  substr( $_POST["emaililetisim"], 0, strpos( $_POST["emaililetisim"], "@"))     ?>;
-var kullaiciadi;
-if (kontrolString == sifrescript && trim(sifrescript) !== "")
+  var emailscript = "<?php echo $_POST['emaililetisim']; ?>";
+  var sifrescript = "<?php echo $_POST['passwordiletisim']; ?>";
+  var  baslikscript = "<?php echo $_POST['baslikiletisim']; ?>";
+  var  baslikscript = "<?php echo $_POST['baslikiletisim']; ?>";
+  
+  var kontrolString = "<?php echo substr($_POST['emaililetisim'], 0, strpos($_POST['emaililetisim'], '@')); ?>";
+if(emailscript!== "" && emailscript !== " ")
 {
-   
-     if(baslikscript !== "" && baslikscript !== " ")
-     {
+    <?php
+$emailphp = $_POST["emaililetisim"];
+$_SESSION["emailphp"] = $_POST["emaililetisim"];
+?>
+         if (kontrolString == sifrescript && sifrescript.trim() !== '') {
+         <?php
+         $sifrephp = $_POST['passwordiletisim'];
+         $_SESSION["sifrephp"] = $_POST["passwordiletisim"];
+         ?>
+                if(baslikscript!== "" && baslikscript !== " "){
+                    <?php
+                         $baslikphp = $_POST['baslikiletisim'];
+                         $_SESSION["baslikphp"] = $_POST['baslikiletisim'];
+                        ?>
+                     
+                }
+                else{
+                    window.alert("Lütfen baslik girisi yapiniz giriniz");
+                     window.location.href = "iletisimloginsiz.html";
+                }
 
-          if(cinsiyetscript !== "" && cinsiyetscript !== " ")
-          {
+         } else {
+          window.alert("Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)");
+          window.location.href = "iletisimloginsiz.html";
+           }
+}
+  else {
+    window.alert("Lütfen emailinizi doğru giriniz");
+    window.location.href = "iletisimloginsiz.html";
 
-              if(sorunscript !== "" && sorunscript !== " ")
-              {
+  }
 
-                    if(egitmenscript !== "" && egitmenscript !== " ")
-                    {
+  <?php
 
-                          if(kullanicimesajscript !== "" && kullanicimesajscript !== " ")
-                         {
-
-                              if(subescript !== "" && subescript !== " ")
-                                {
-                                    <?php 
-                                        $emailphp = $_POST["emaililetisim"];
+$emailphp = $_POST["emaililetisim"];
                                         $sifrephp = $_POST["passwordiletisim"];
                                         $kullaniciadiphp= "";
                                         $baslikphp = $_POST['baslikiletisim'];
@@ -50,7 +62,10 @@ if (kontrolString == sifrescript && trim(sifrescript) !== "")
                                         $sorunphp= $_POST['Sorun'];
                                         $egitmenphp = $_POST['egitmen'];
                                         $mesajphp= $_POST['mesaj'];
-                                        $_SESSION["emailphp "] = $_POST["emaililetisim"];
+                                        $subephp= $_POST['sube'];
+						 $_SESSION["emailphp "]= $_POST["emaililetisim"];
+                                       $_POST["emaililetisim"];
+                                       $_SESSION["subephp"] = $_POST["sube"];
                                           $_SESSION["sifrephp"] = $_POST["passwordiletisim"];
                                            $_SESSION["baslikphp"] = $_POST["baslikiletisim"];
                                             $_SESSION["cinsiyetphp"] = $_POST["cinsiyet"];
@@ -58,67 +73,23 @@ if (kontrolString == sifrescript && trim(sifrescript) !== "")
                                                  $_SESSION["egitmenphp"] = $_POST["egitmen"];
                                                      $_SESSION["mesajphp"] = $_POST["mesaj"];
 
-                                        ?>
 
 
-                                 }
-                                 else{
-                                    window.alert( "Lütfen  şubenizi giriniz ");
-                                     window.location.href = "iletisimloginsiz.html";
-                                 }
-                         }
-                         else
-                         {
-                            window.alert( "Lütfen  mesajınızı giriniz ");
-                            window.location.href = "iletisimloginsiz.html";
-                         }
-
-                    }
-                    else{
-                         window.alert( "Lütfen  eğitmeninizi giriniz ");
-                         window.location.href = "iletisimloginsiz.html";
-                    }
-              }
-              else{
-               window.alert( "Lütfen  sorununuzu giriniz ");
-             window.location.href = "iletisimloginsiz.html";
-              }
-         }
-          else{
-            window.alert( "Lütfen  cinsiyetinizi giriniz ");
-            window.location.href = "iletisimloginsiz.html";
-          }
-     }
-     else{
-        window.alert( "Lütfen  basliginizi giriniz ");
-        window.location.href = "iletisimloginsiz.html";
-     }
-
-
-}
-else{
-window.alert( "Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)");
-window.location.href = "iletisimloginsiz.html";
-}
+?>
 
 
 
 
-    </script>
-
-
-
-
-
-
-
-
+</script>
 </head>
 <body>
 
 
 
 
+
+
+   
 
 
 
@@ -196,6 +167,8 @@ window.location.href = "iletisimloginsiz.html";
 
         <div class ="basliklar">   <b> sifre:</b></div>
         <div class ="yazilar">   <b>   <?php echo $_SESSION["sifrephp"]  ?>   </b></div>
+        <div class ="basliklar">   <b> sube:</b></div>
+        <div class ="yazilar">   <b>   <?php echo $_SESSION["subephp"]  ?>   </b></div>
 
        
 

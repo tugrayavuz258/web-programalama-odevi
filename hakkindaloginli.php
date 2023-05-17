@@ -36,6 +36,7 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
         echo '<script>';
         echo 'window.alert("' . $alertmesaji . '");';
         echo '</script>';
+        
     } else {
         $hataMesaji = "Lütfen şifrenizi doğru giriniz (şifre ile mailinizin @ işaretinden önceki bölümü aynı olmalıdır)";
         echo '<script>';
