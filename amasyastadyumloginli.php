@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,6 @@
 </head>
 <body>
     <div class="container"> 
-
         <div calss="row">
             <div class="header col-lg-12 col-md-12">
    
@@ -20,29 +19,29 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginsiz.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
                             </td>
         
                             <td>
-                                <a  class="headerlinkler" href="ozgecmisloginsiz.html"> ÖZGEÇMİŞ</a>
+                                <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
                             </td>
         
                             <td>
-                                <a class="headerlinkler" href="sehrimloginsiz.html"> SEHRİM</a>
+                                <a class="headerlinkler" href="sehrimloginli.php"> SEHRİM</a>
                             </td>
         
                         </tr>
         
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="mirasimizloginsiz.html"> MİRASIMIZ </a>
+                                <a class="headerlinkler" href="mirasimizloginli.php"> MİRASIMIZ </a>
                             </td>
             
                             <td>
-                                <a class="headerlinkler" href="hobilerimloginsiz.html"> HOBİLERİM</a>
+                                <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                             </td>
                             <td>
-                                <a class="headerlinkler" href="iletisim.html"> ILETISIM </a>
+                                <a class="headerlinkler" href="iletisimloginli.php"> ILETISIM </a>
                             </td>
             
         
@@ -62,9 +61,8 @@
                 <div class="tabloicerigidiv2 ">
                     <tr>
                        
-                        <td>
-                            <a class="headerlinkler" href="login.html"> LOG-IN</a>
-                            <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo  $_SESSION["kullaniciAdi"]  ?> </a>
+                    <td>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php session_start(); echo $_SESSION["kullaniciAdi"];  ?> </a>
                         </td>
         
                     </tr>
@@ -100,7 +98,7 @@
     <p>    12 Haziran Stadyumu, Amasyanın merkezinde bulunan ve 7,810 seyirci kapasitesine sahip olan futbol stadyumu. 2012 yılında tadilat sonucunda iki yıl aradan sonra 12 Ekim 2014 tarihinde hizmete açılmıştır</p>
     
     
-    <p> Kaynak: <a href="https://tr.wikipedia.org/wiki/Amasya_12_Haziran_Stadyumu">wikipedia</a> </p>
+    <p> Kaynak: <a href="https://tr.wikipedia.org/wiki/Amasya_12_Haziran_Stadyumu"> wikipedia </a> </p>
     </div>
 </article>
 

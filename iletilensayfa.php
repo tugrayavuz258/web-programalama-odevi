@@ -103,7 +103,7 @@ $emailphp = $_POST["emaililetisim"];
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginsiz.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="index.html"> HAKKINDA </a>
                             </td>
         
                             <td>

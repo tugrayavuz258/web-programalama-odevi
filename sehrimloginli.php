@@ -23,29 +23,29 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="index.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
                             </td>
         
                             <td>
-                                <a  class="headerlinkler" href="ozgecmisloginsiz.html"> ÖZGEÇMİŞ</a>
+                                <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
                             </td>
         
                             <td>
-                                <a class="headerlinkler" href="sehrimloginsiz.html"> SEHRİM</a>
+                                <a class="headerlinkler" href="sehrimloginli.php"> SEHRİM</a>
                             </td>
         
                         </tr>
         
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="mirasimizloginsiz.html"> MİRASIMIZ </a>
+                                <a class="headerlinkler" href="mirasimizloginli.php"> MİRASIMIZ </a>
                             </td>
             
                             <td>
-                                <a class="headerlinkler" href="hobilerimloginsiz.html"> HOBİLERİM</a>
+                                <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                             </td>
                             <td>
-                                <a class="headerlinkler" href="iletisimloginsiz.html"> ILETISIM </a>
+                                <a class="headerlinkler" href="iletisimloginli.php"> ILETISIM </a>
                             </td>
             
         
@@ -65,8 +65,9 @@
                 <div class="tabloicerigidiv2 ">
                     <tr>
                        
-                        <td>
-                            <a class="headerlinkler" href="login.html"> LOG-IN</a>
+                       
+                    <td>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php session_start(); echo $_SESSION["kullaniciAdi"];  ?> </a>
                         </td>
         
                     </tr>
@@ -163,16 +164,16 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="amasyastadyumloginsiz.html"><img src="amasyastadyum.jpg" alt="First slide"></a>
+        <a href="amasyastadyumloginli.php"><img src="amasyastadyum.jpg" alt="First slide"></a>
       </div>
       <div class="carousel-item">
-        <a href="FerhatIleSirinLoginsiz.html"><img src="Ferhat_ile_Şirin,_Amasya.jpg" alt="Second slide"></a>
+        <a href="FerhatIleSirinLoginli.php"><img src="Ferhat_ile_Şirin,_Amasya.jpg" alt="Second slide"></a>
       </div>
       <div class="carousel-item">
-        <a href="yesilirmak.html"><img src="Yeşilırmak2.jpg" alt="Third slide"></a>
+        <a href="yesilirmakloginli.php"><img src="Yeşilırmak2.jpg" alt="Third slide"></a>
       </div>
       <div class="carousel-item">
-        <a href="strabon.html"><img src="strabon.jpg" alt="Fourth slide"></a>
+        <a href="strabonloginli.php"><img src="strabon.jpg" alt="Fourth slide"></a>
       </div>
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Strabon</title>
+    <title>Ferhat ile sirin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="strabon.css">
+<link rel="stylesheet" type="text/css" href="FerhatIleSirinLoginli.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -20,29 +20,29 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="index.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
                             </td>
         
                             <td>
-                                <a  class="headerlinkler" href="ozgecmisloginsiz.html"> ÖZGEÇMİŞ</a>
+                                <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
                             </td>
         
                             <td>
-                                <a class="headerlinkler" href="sehrimloginsiz.html"> SEHRİM</a>
+                                <a class="headerlinkler" href="sehrimloginli.php"> SEHRİM</a>
                             </td>
         
                         </tr>
         
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="mirasimizloginsiz.html"> MİRASIMIZ </a>
+                                <a class="headerlinkler" href="mirasimizloginli.php"> MİRASIMIZ </a>
                             </td>
             
                             <td>
-                                <a class="headerlinkler" href="hobilerimloginsiz.html"> HOBİLERİM</a>
+                                <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                             </td>
                             <td>
-                                <a class="headerlinkler" href="iletisimloginsiz.html"> ILETISIM </a>
+                                <a class="headerlinkler" href="iletisimloginli.php"> ILETISIM </a>
                             </td>
         
                         </tr>
@@ -61,8 +61,8 @@
                 <div class="tabloicerigidiv2 ">
                     <tr>
                        
-                        <td>
-                            <a class="headerlinkler" href="login.html"> LOG-IN</a>
+                    <td>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php session_start(); echo $_SESSION["kullaniciAdi"];  ?> </a>
                         </td>
         
                     </tr>
@@ -77,7 +77,7 @@
 
 
 <div class="foto col-lg-12 col-md-12"> 
-<img class="amasyastadyum" src="strabon.jpg">
+<img class="amasyastadyum" src="Ferhat_ile_Şirin,_Amasya.jpg">
 
 
 </div>
@@ -85,21 +85,20 @@
 <div  class="headerileyazilararasiboyunabosluk col-12 col-md-6"> &nbsp;</div>
 
 
-<div class="yazilarGenel col-lg-12 col-md-12 ">s
+<div class="yazilarGenel col-lg-12 col-md-12 ">
     <section>
         <article>
     <div class="YazilarBaslik ">
-        Strabon
+        Ferhat Ile Şirin
 </div>
 
 <div class="Yazilar ">
 
 
-    <p>  Strabon (Yunanca: Στράβων; MÖ 64 - MS 24), Yunan tarihçi, coğrafyacı ve filozoftur. Yaşadığı dönemde bilinen yerlere yapılan göçlere ve hangi milletlerin nerelerde yerleşmeler yaptığı üzerine gerçekleştirdiği çalışmalarla ün kazanmıştır.</p>
-    <p>    Roma aristokratlarıyla kan bağı olduğu düşünülmektedir.[kaynak belirtilmeli] Bugünkü Amasya ili sınırlarının içinde varlıklı bir ailenin çocuğu olarak dünyaya gelmiştir. Dünyanın ilk coğrafyacısı kabul edilir.</p>
+    <p>   Ferhat ile Şirin ("Ferhâd ve Şîrîn", "Ferhadnâme" gibi adlarla da bilinir), klasik Türk edebiyatında ve Türk halk edebiyatında işlenen bir klasik aşk macerasıdır.</p>
     
     
-    <p> Kaynak: <a href="https://tr.wikipedia.org/wiki/Ye%C5%9Fil%C4%B1rmak">wikipedia</a> </p>
+    <p> Kaynak: <a href="https://tr.wikipedia.org/wiki/Ferhat_ile_%C5%9Eirin">wikipedia</a> </p>
     </div>
 </article>
 

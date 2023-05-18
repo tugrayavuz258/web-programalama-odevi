@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,15 +18,15 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginsiz.php"> HAKKINDA </a>
+                                <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
                             </td>
         
                             <td>
-                                <a  class="headerlinkler" href="ozgecmisloginsiz.php"> ÖZGEÇMİŞ</a>
+                                <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
                             </td>
         
                             <td>
-                                <a class="headerlinkler" href="sehrimloginsiz.php"> SEHRİM</a>
+                                <a class="headerlinkler" href="sehrimloginli.php"> SEHRİM</a>
                             </td>
         
                         </tr>

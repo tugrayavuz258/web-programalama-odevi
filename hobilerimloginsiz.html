@@ -24,7 +24,7 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginsiz.html"> HAKKINDA </a>
+                                <a class="headerlinkler" href="index.html"> HAKKINDA </a>
                             </td>
         
                             <td>
@@ -47,7 +47,7 @@
                             </td>
             
                             <td>
-                                <a class="headerlinkler" href="iletisim.html"> ILETISIM </a>
+                                <a class="headerlinkler" href="iletisimloginsiz.html"> ILETISIM </a>
                             </td>
                         </tr>
         
@@ -86,34 +86,24 @@
 
 
  
-        <button id="fetchButton" onclick="fetchAndDisplayImage()">Fotoğraf Getir</button>
-    <script>
-    async function fetchAndDisplayImage() {
-    const url = 'https://online-movie-database.p.rapidapi.com/actors/get-all-videos?nconst=nm0001667';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '280094c9f1msh343aa602d5f2261p13dbdbjsn113aa031bb79',
-        'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-      }
-    };
+<div id="image">  </div>
 
-    try {
-      const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
-
-      // Gelen verileri kullanarak fotoğrafı görüntüleyebilirsiniz
-      // Örneğin, bir resim etiketi (<img>) oluşturup verileri içine yerleştirebilirsiniz
-      const imageElement = document.createElement("img");
-      // Fotoğraf URL'sini buraya yerleştirin
-      imageElement.src = "https://example.com/path/to/image.jpg";
-      document.body.appendChild(imageElement);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-      </script>
+        <button id="buton" onclick="fetchdata()">Fotoğraf Getir</button>
+     
+        <script>
+            const button = document.getElementById("buton");
+            const dog = document.getElementById("image");
+            const fetchdata = () => {
+              fetch("https://dog.ceo/api/breeds/image/random")
+                .then((response) => response.json())
+                .then((data) => {
+                  dog.innerHTML = `<div class="card">
+          <div class="cardImg"><img src="${data.message}" alt="" /></div>
+          
+          </div>`;
+                });
+            };
+          </script>
 
 
     

@@ -76,9 +76,7 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
         <div class="headerlinktablolarigeneldiv1">
             <div class="tabloicerigidiv">
                 <tr>
-                    <td>
-                        <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
-                    </td>
+                    
 
                     <td>
                         <a  class="headerlinkler" href="ozgecmisloginli.php"> ÖZGEÇMİŞ</a>
@@ -98,6 +96,9 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
                     <td>
                         <a class="headerlinkler" href="hobilerimloginli.php"> HOBİLERİM</a>
                     </td>
+                    <td>
+                                <a class="headerlinkler" href="iletisimloginli.php"> ILETISIM </a>
+                            </td>
     
 
                 </tr>
@@ -116,7 +117,8 @@ if (isset($_POST['emailname']) && isset($_POST['passwordname'])) {
         <div class="tabloicerigidiv2 ">
             <tr>
                
-                <td>
+               
+            <td>
                     <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo  $_SESSION["kullaniciAdi"]  ?> </a>
                     
                     
