@@ -79,7 +79,7 @@
         </div>
         <div  class="headerileyazilararasiboyunabosluk col-12 col-md-6"> &nbsp;</div>
  <div class="sehrimizSolBosluk  col-lg-1 col-md-1"></div>
- <div class="SehrimizYazilar col-lg-4.5 col-md-4.5"> 
+ <div class="SehrimizYazilar col-lg-4 col-md-4"> 
 
     <section>
         <article>
@@ -110,7 +110,7 @@
  </div>
  <div class="sehrimizAraBosluk col-lg-1 col-md-1"></div>
 
- <div class="SehrimizYazilar col-lg-4.5 col-md-4.5"> 
+ <div class="SehrimizYazilar col-lg-4 col-md-4"> 
 
     <section>
         <article>

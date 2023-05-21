@@ -78,10 +78,9 @@
             <div class="tabloicerigidiv2 ">
                 <tr>
                    
-                    <td>
-                        <a class="headerlinkler" href="login.html"> LOG-IN</a>
-                    </td>
-    
+                <td>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php session_start(); echo $_SESSION["kullaniciAdi"];  ?> </a>
+                        </td>
                 </tr>
             </div>
             </div>

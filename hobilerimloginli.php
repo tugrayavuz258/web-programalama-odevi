@@ -82,39 +82,55 @@
 
 
 
+       
 
-        
-
-
+        <div class="foto col-lg-4 col-md-4"> 
+       
+       <div id="image" >  
+         
+               <button id="buton" onclick="fetchdata()">Fotoğraf Getir</button>
+            
+               <script>
+                   const button = document.getElementById("buton");
+                   const dog = document.getElementById("image");
+                   const fetchdata = () => {
+                     fetch("https://dog.ceo/api/breeds/image/random")
+                       .then((response) => response.json())
+                       .then((data) => {
+                         dog.innerHTML = `<div class="card">
+                 <div class="cardImg"><img src="${data.message}" alt="" /></div>
+                 
+                 </div>`;
+                       });
+                   };
+                 </script>
+       
+       
+       </div>
+       </div>
+       
+       
+       <div class="arabosluk col-lg-4 col-md-4"></div>
+       
+       <div class="yazilar col-lg-4 col-md-4">
+       
+           <p>Köpekler, dünyanın en sadık ve sevgi dolu evcil hayvanları arasında yer alır. Bir köpek sahibi olarak köpeklerin sunduğu sevgi ve bağlılık hakkında konuşmak, benim için büyük bir zevktir.    </p>
+           <p>Köpekler, sahiplerine olan sevgilerini koşulsuz bir şekilde ifade eden hayvanlardır. Onları sevdiğinizde, size inanılmaz bir mutluluk ve sevinçle karşılık verirler. Köpekler, sadık dostlar olarak bilinir ve sizinle her anınızı paylaşmaktan büyük bir mutluluk duyarlar. Onlarla vakit geçirmek, sizinle oyun oynamak ve size eşlik etmek için sabırsızlanırlar. Bu sevgi dolu varlıklar, hayatınızı daha da anlamlı hale getirebilir.</p>
+           <p> Köpeklerin sevgisi, insanlar üzerinde olumlu etkileri olan birçok fayda sağlar. Öncelikle, köpekler stresi azaltabilir ve ruh halinizi iyileştirebilir. Onlarla vakit geçirmek, endorfin ve oksitosin gibi mutluluk hormonlarının salınımını artırır. Bu da size daha iyi bir duygusal durum ve genel bir mutluluk sağlar.</p>
+           <p>Ayrıca, köpekler sosyal varlıklardır ve onlarla zaman geçirmek, sosyal bağlantılarınızı güçlendirmenize yardımcı olur. Köpek sahipleri genellikle birbirleriyle köpekleri üzerinden ortak bir noktada buluşur ve köpek parklarında veya sokakta yürürken diğer köpek sahipleriyle rahatlıkla iletişim kurabilirler. Bu şekilde, köpeklerin sevgisi, insanlar arasında yeni dostluklar ve ilişkilerin oluşmasını sağlayabilir.</p>
+           <P> Ayrıca, köpekler size birçok öğretici deneyim sunar. Onları eğitmek ve sorumluluklarını yerine getirmek, size disiplin ve sabır kazandırır. Ayrıca, onları beslemek, yürüyüşe çıkarmak ve temel ihtiyaçlarını karşılamak için düzenli bir rutine sahip olmanız gerektiğinden, disiplinli ve düzenli bir yaşam tarzını benimsemenize yardımcı olur.</P>
+       
+       
+       </div>
+       
+       
+       
+       
+       
+       <div class="sifirla"> </div>
+       
+       
  
-        <button id="fetchButton" onclick="fetchAndDisplayImage()">Fotoğraf Getir</button>
-    <script>
-    async function fetchAndDisplayImage() {
-    const url = 'https://online-movie-database.p.rapidapi.com/actors/get-all-videos?nconst=nm0001667';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '280094c9f1msh343aa602d5f2261p13dbdbjsn113aa031bb79',
-        'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-      }
-    };
-
-    try {
-      const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
-
-      // Gelen verileri kullanarak fotoğrafı görüntüleyebilirsiniz
-      // Örneğin, bir resim etiketi (<img>) oluşturup verileri içine yerleştirebilirsiniz
-      const imageElement = document.createElement("img");
-      // Fotoğraf URL'sini buraya yerleştirin
-      imageElement.src = "https://example.com/path/to/image.jpg";
-      document.body.appendChild(imageElement);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-      </script>
 
 
     

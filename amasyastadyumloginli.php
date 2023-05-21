@@ -19,7 +19,7 @@
                     <div class="tabloicerigidiv">
                         <tr>
                             <td>
-                                <a class="headerlinkler" href="hakkindaloginli.php"> HAKKINDA </a>
+                                <a class="headerlinkler" href="index.html"> HAKKINDA </a>
                             </td>
         
                             <td>
