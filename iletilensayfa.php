@@ -145,7 +145,7 @@ $emailphp = $_POST["emaililetisim"];
                     <tr>
                        
                         <td>
-                        <a class="headerlinkler" href="hakkindaloginsiz.html">  (tikla cikis yap) <br> <?php echo   $_SESSION["sifrephp"]  ?> </a>
+                        <a class="headerlinkler" href="login.html">  (tikla cikis yap) <br> <?php echo   $_SESSION["sifrephp"]  ?> </a>
                         </td>
         
                     </tr>
@@ -160,7 +160,7 @@ $emailphp = $_POST["emaililetisim"];
 
 
 
-
+ 
         <div class= "logindiv col-lg-12 col-md-12"> 
         <div class ="basliklar">   <b> email:</b></div>
         <div class ="yazilar">   <b>   <?php  echo  $_SESSION["emailphp "]  ?>   </b></div>
